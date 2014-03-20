@@ -1,0 +1,15 @@
+<% content_for :contact do %>
+	class="active"
+<% end %>
+
+<% @messages.each do |m|%>
+	电子邮件：
+	<%= m.email %><br />
+	电话：
+	<%= m.phone %><br />
+	留言时间：
+	<%= m.created_at %><br />
+	留言内容:
+	<%= m.content %>
+	<hr />
+<% end %>

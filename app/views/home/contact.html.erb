@@ -1,0 +1,13 @@
+<% content_for :contact do %>
+	class="active"
+<% end %>
+
+<h2>给我留言</h2>
+<%= form_for @message, url: home_save_message_path do |f|%>
+	<%= f.label :email, "电子邮件：" %>
+	<%= f.email_field :email, :require => true %>
+	<%= f.label :email, "联系电话：" %>
+	<%= f.text_field :phone, :require => true %>
+	<%= f.kindeditor :content %>
+	<%= f.submit '保存' %>
+<% end %>
