@@ -13,4 +13,8 @@ class AdminController < ApplicationController
 		@me.update_attributes(params.require(:me).permit(:content))
 		redirect_to admin_edit_me_path
 	end
+
+	def contact
+		@messages = Message.all
+	end
 end

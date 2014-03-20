@@ -9,7 +9,7 @@
   <meta name="author" content="smallgoldstone">
   <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-  <title>住在井底的青蛙 -- smallgoldstone & SGS Studio </title>
+  <title>住在井底的青蛙 -- smallgoldstone & 井底蛙 </title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
@@ -34,9 +34,9 @@
 			    <li <%= yield :home %>><%= link_to  "Home", root_path %></li>
 			    <li <%= yield :project %>><a href="#">项目 & 产品</a></li>
 			    <li <%= yield :service %>><a href="#">可提供的服务</a></li>
-			    <li <%= yield :me %>><%= link_to "我", home_me_path  %></li>
-					<li <%= yield :share %>><a href="#">开源 & 分享</a></li>
-					<li <%= yield :contact %>><a href="#">留言 & 联系我</a></li>
+			    <li <%= yield :me %>><%= link_to "我", home_me_path %></li>
+					<li <%= yield :share %>><a href="http://github.com/smallgoldstone">开源 & 分享</a></li>
+					<li <%= yield :contact %>><%= link_to "留言 & 联系我", home_contact_path, 'data-no-turbolink' => true %></li>
 			  </ul>
 			</div>
 
@@ -44,7 +44,7 @@
 
       <!-- Site footer -->
       <div class="footer">
-        <p>&copy; 2014 住在井底的青蛙 &nbsp; 备案：<a href="http://www.miitbeian.gov.cn/">辽ICP备14002090号</a>&nbsp;<script src="http://s13.cnzz.com/stat.php?id=5806213&web_id=5806213" language="JavaScript"></script>&nbsp;
+        <p>&copy; 2014 住在井底的青蛙 &nbsp; <a href="http://www.miitbeian.gov.cn/">辽ICP备14002090号</a>&nbsp;
           <%= link_to "后台管理", admin_console_path %>&nbsp;
           <% if user_signed_in? %>
             <%= link_to "退出", destroy_user_session_path, :method => :delete %>
@@ -56,8 +56,6 @@
     </div> <!-- /container -->
 
 
-    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
-    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
 
 </body>

@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140227032717) do
+ActiveRecord::Schema.define(version: 20140228055722) do
 
   create_table "mes", force: true do |t|
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", force: true do |t|
+    t.string   "email"
+    t.text     "content"
+    t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
